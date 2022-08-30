@@ -9,10 +9,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: wget https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm -O template.html
+      - run: wget google.com -O template.html
       - uses: ./
         with:
           token: ${{ secrets.SECURITY_TOKEN }}
+          sarifReportDir: .
           templateFile: template.html
       - uses: actions/upload-artifact@v2
         with:
